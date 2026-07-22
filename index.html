@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nayeli "Ellie" Coria — Hospitality &amp; Bartending Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFFCF5;
+    --paper:#FFFEFB;
+    --yellow:#F6E8AE;
+    --yellow-deep:#E9CE5C;
+    --purple:#DECBF0;
+    --purple-deep:#A883D9;
+    --ink:#3B2354;
+    --ink-soft:#6C5688;
+    --ink-faint:#9683AD;
+    --line: rgba(59,35,84,0.16);
+    --max: 920px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-weight:400;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    margin:0;
+    color:var(--ink);
+  }
+
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  a{color:inherit;}
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- background texture ---------- */
+  body{
+    background-image:
+      radial-gradient(circle at 8% 12%, rgba(233,206,92,0.35), transparent 40%),
+      radial-gradient(circle at 92% 4%, rgba(168,131,217,0.28), transparent 38%);
+    background-repeat:no-repeat;
+  }
+
+  /* ---------- signature: citrus twist divider ---------- */
+  .twist{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin:56px 0;
+    color:var(--purple-deep);
+  }
+  .twist .rule{
+    height:1px;
+    flex:1;
+    background:var(--line);
+    max-width:220px;
+  }
+  .twist svg{ width:26px; height:26px; flex-shrink:0; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:76px 0 56px;
+    position:relative;
+    text-align:center;
+    background:linear-gradient(160deg, var(--yellow) 0%, var(--purple) 100%);
+    margin-bottom:8px;
+  }
+  .hero-top{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+  .hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Space Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    padding:7px 14px;
+    border-radius:100px;
+  }
+  .hero-badge svg{width:13px;height:13px;}
+
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.4rem);
+    line-height:1.02;
+    margin-top:22px;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--purple-deep);
+  }
+  .hero-role{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:clamp(1.1rem, 2.4vw, 1.5rem);
+    color:var(--ink-soft);
+    margin-top:14px;
+  }
+
+  .hero-summary{
+    margin:28px auto 0;
+    max-width:640px;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+  }
+
+  .hero-contact{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:32px;
+  }
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:9px 16px;
+    border-radius:100px;
+    font-size:0.88rem;
+  }
+  .chip svg{width:15px;height:15px;color:var(--purple-deep);flex-shrink:0;}
+  .chip.solid{
+    background:var(--paper);
+    border-color:transparent;
+    font-weight:500;
+  }
+
+  /* ---------- section shell ---------- */
+  section{ padding:8px 0; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:34px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-size:clamp(1.6rem, 3vw, 2.1rem);
+  }
+  .section-num{
+    font-family:'Space Mono',monospace;
+    font-size:0.78rem;
+    color:var(--ink-faint);
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:36px;
+    align-items:start;
+  }
+  .avatar{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:linear-gradient(150deg, var(--yellow) 0%, var(--purple) 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:2.6rem;
+    color:var(--ink);
+    flex-shrink:0;
+    border:3px solid var(--paper);
+    box-shadow:0 0 0 1px var(--line);
+  }
+  .about-text p{ margin:0 0 14px; color:var(--ink-soft); }
+  .about-text p:last-child{ margin-bottom:0; }
+  .about-text strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- skills ---------- */
+  .skills-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:34px 36px;
+  }
+  .skill-group{
+    padding:18px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .skill-group:first-child{ padding-top:0; }
+  .skill-group:last-child{ border-bottom:none; padding-bottom:0; }
+  .skill-group-label{
+    font-family:'Space Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--purple-deep);
+    margin-bottom:12px;
+  }
+  .pill-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+  }
+  .pill{
+    font-size:0.88rem;
+    padding:7px 14px;
+    border-radius:100px;
+    background:var(--cream);
+    border:1px solid var(--line);
+    color:var(--ink);
+  }
+
+  /* ---------- experience (menu style) ---------- */
+  .menu-item{
+    padding:30px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .menu-item:first-child{ padding-top:0; }
+  .menu-item:last-child{ border-bottom:none; padding-bottom:0; }
+
+  .menu-item-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .menu-item-title{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .menu-item-title h3{
+    font-size:1.35rem;
+  }
+  .menu-item-venue{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    font-family:'Fraunces', serif;
+  }
+  .menu-item-meta{
+    font-family:'Space Mono', monospace;
+    font-size:0.78rem;
+    color:var(--ink-faint);
+    text-align:right;
+    white-space:nowrap;
+  }
+  .menu-item ul{
+    margin:16px 0 0;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+  .menu-item li{
+    display:flex;
+    gap:11px;
+    color:var(--ink-soft);
+    font-size:0.98rem;
+  }
+  .menu-item li svg{
+    width:14px; height:14px;
+    flex-shrink:0;
+    margin-top:5px;
+    color:var(--yellow-deep);
+  }
+
+  /* ---------- credentials ---------- */
+  .cred-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap:18px;
+  }
+  .cred-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:22px 24px;
+  }
+  .cred-card .eyebrow{ margin-bottom:8px; }
+  .cred-card h3{
+    font-size:1.05rem;
+    font-weight:500;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    margin-top:64px;
+    background:var(--ink);
+    color:var(--cream);
+    padding:56px 0 40px;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:28px;
+  }
+  footer h2{
+    color:var(--cream);
+    font-size:clamp(1.6rem,3vw,2.2rem);
+  }
+  footer .eyebrow{ color:var(--purple); }
+  .footer-contact{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:flex-start;
+  }
+  .footer-contact a{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:0.98rem;
+    text-decoration:none;
+    color:var(--cream);
+    border-bottom:1px solid rgba(255,252,245,0.25);
+    padding-bottom:2px;
+  }
+  .footer-contact svg{ width:15px;height:15px; color:var(--yellow-deep); }
+  .footer-bottom{
+    max-width:var(--max);
+    margin:44px auto 0;
+    padding:20px 28px 0;
+    border-top:1px solid rgba(255,252,245,0.14);
+    font-family:'Space Mono',monospace;
+    font-size:0.74rem;
+    color:rgba(255,252,245,0.55);
+  }
+
+  @media (max-width:640px){
+    .about-grid{ grid-template-columns:1fr; }
+    .avatar{ width:96px; height:96px; font-size:2rem; }
+    .skills-card{ padding:26px 22px; }
+    .menu-item-meta{ text-align:left; }
+    footer .wrap{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap hero">
+  <div class="hero-top">
+    <div>
+      <span class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16l-6 9v6H10v-6L4 4z"/></svg>
+        Las Vegas, NV
+      </span>
+      <h1>Nayeli &ldquo;<em>Ellie</em>&rdquo; Coria</h1>
+      <p class="hero-role">Hospitality &amp; bartending professional</p>
+      <p class="hero-summary">Bilingual hospitality pro who's spent the last several years behind Las Vegas bars and pool decks &mdash; mixing craft cocktails, running high-volume shifts, and making sure every guest leaves happier than they arrived. Comfortable leading a team, closing out a bar alone, or covering both at once.</p>
+    </div>
+  </div>
+
+  <div class="hero-contact">
+    <span class="chip solid">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      702-619-9192
+    </span>
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+      elliemices@gmail.com
+    </span>
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+      English / Spanish
+    </span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="twist">
+    <span class="rule"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c4 2 7 5 7 9a7 7 0 0 1-14 0c0-2.5 1.3-4.4 3-6"/><path d="M12 3c-1 3-1 6 0 9"/></svg>
+    <span class="rule"></span>
+  </div>
+</div>
+
+<section class="wrap" id="about">
+  <div class="section-head">
+    <h2>About</h2>
+    <span class="section-num">the pour</span>
+  </div>
+  <div class="about-grid">
+    <div class="avatar">EC</div>
+    <div class="about-text">
+      <p><strong>Currently pouring at Cinemark</strong> in Las Vegas, where she builds craft cocktails and runs the bar solo through fast-paced shifts &mdash; from opening setup to closing breakdown.</p>
+      <p>Before bartending, she spent years leading lifeguard teams across some of Las Vegas's busiest pool venues &mdash; Elia Beach Club, Palms Place, JW Marriott, Resorts World, and TPC Golf Club &mdash; where she coordinated coverage and kept staff and guests running smoothly during peak season.</p>
+      <p>She holds current Nevada work cards and a working knowledge of liquor, wine, beer, and responsible alcohol service, and is comfortable in high-volume, guest-facing environments where reliability matters as much as hospitality.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="twist">
+    <span class="rule"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c4 2 7 5 7 9a7 7 0 0 1-14 0c0-2.5 1.3-4.4 3-6"/><path d="M12 3c-1 3-1 6 0 9"/></svg>
+    <span class="rule"></span>
+  </div>
+</div>
+
+<section class="wrap" id="skills">
+  <div class="section-head">
+    <h2>Skills</h2>
+    <span class="section-num">the ingredients</span>
+  </div>
+  <div class="skills-card">
+    <div class="skill-group">
+      <div class="skill-group-label">Bar &amp; beverage</div>
+      <div class="pill-row">
+        <span class="pill">Craft cocktails</span>
+        <span class="pill">Beer &amp; wine knowledge</span>
+        <span class="pill">POS systems</span>
+        <span class="pill">Cash handling</span>
+        <span class="pill">Bar setup &amp; breakdown</span>
+        <span class="pill">Inventory restocking</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Guest service</div>
+      <div class="pill-row">
+        <span class="pill">Upselling &amp; recommendations</span>
+        <span class="pill">Order taking</span>
+        <span class="pill">Food &amp; beverage service</span>
+        <span class="pill">Conflict resolution</span>
+        <span class="pill">Bilingual English / Spanish</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Operations &amp; leadership</div>
+      <div class="pill-row">
+        <span class="pill">Team leadership</span>
+        <span class="pill">Staff coverage</span>
+        <span class="pill">Sanitation &amp; food safety</span>
+        <span class="pill">Fast-paced multitasking</span>
+        <span class="pill">Problem solving</span>
+        <span class="pill">Reliability &amp; punctuality</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="twist">
+    <span class="rule"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c4 2 7 5 7 9a7 7 0 0 1-14 0c0-2.5 1.3-4.4 3-6"/><path d="M12 3c-1 3-1 6 0 9"/></svg>
+    <span class="rule"></span>
+  </div>
+</div>
+
+<section class="wrap" id="experience">
+  <div class="section-head">
+    <h2>Experience</h2>
+    <span class="section-num">the menu</span>
+  </div>
+
+  <div>
+    <div class="menu-item">
+      <div class="menu-item-head">
+        <div class="menu-item-title">
+          <h3>Bartender</h3>
+          <span class="menu-item-venue">Cinemark</span>
+        </div>
+        <span class="menu-item-meta">Las Vegas, NV &middot; 2024&ndash;Present</span>
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Prepares and serves craft cocktails, draft beer, wine, and other beverages following responsible alcohol-service procedures.</li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Processes guest orders and payments, delivers food, maintains bar supplies, and recommends items that support upselling.</li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Handles bar opening, cleaning, equipment breakdown, dishwashing, sweeping, and mopping in a fast-paced theater environment.</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-head">
+        <div class="menu-item-title">
+          <h3>Lead Lifeguard</h3>
+          <span class="menu-item-venue">Desert Guard</span>
+        </div>
+        <span class="menu-item-meta">Las Vegas, NV &middot; 2021&ndash;2024</span>
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Led lifeguard coverage across properties including Elia Beach Club, Palms Place, JW Marriott, Resorts World, and TPC Golf Club.</li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Assigned coverage, supported staff, filled scheduling gaps, and helped maintain safe, guest-ready pool areas.</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-head">
+        <div class="menu-item-title">
+          <h3>Lifeguard</h3>
+          <span class="menu-item-venue">Circa Resort &amp; Casino &mdash; Stadium Swim</span>
+        </div>
+        <span class="menu-item-meta">Las Vegas, NV &middot; 2020 &middot; 8 mo</span>
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Greeted guests, managed the towel desk, cleaned pool areas, and arranged chairs for daily operations and special events.</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-head">
+        <div class="menu-item-title">
+          <h3>Barista &amp; Dessert Maker</h3>
+          <span class="menu-item-venue">Doughp at Planet Hollywood</span>
+        </div>
+        <span class="menu-item-meta">Las Vegas, NV &middot; 2020 &middot; 8 mo</span>
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Operated the register, prepared menu items, cleaned and replenished supplies, and packaged products for shipping.</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-head">
+        <div class="menu-item-title">
+          <h3>Lifeguard</h3>
+          <span class="menu-item-venue">MGM Grand</span>
+        </div>
+        <span class="menu-item-meta">Las Vegas, NV &middot; 2019&ndash;2021</span>
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Ushered guests, checked bags, maintained towel stations, removed trash, and set up umbrellas and chairs.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="twist">
+    <span class="rule"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c4 2 7 5 7 9a7 7 0 0 1-14 0c0-2.5 1.3-4.4 3-6"/><path d="M12 3c-1 3-1 6 0 9"/></svg>
+    <span class="rule"></span>
+  </div>
+</div>
+
+<section class="wrap" id="credentials">
+  <div class="section-head">
+    <h2>Education &amp; certifications</h2>
+    <span class="section-num">the fine print</span>
+  </div>
+  <div class="cred-grid">
+    <div class="cred-card">
+      <div class="eyebrow">Diploma</div>
+      <h3>High School Diploma</h3>
+      <span class="menu-item-venue" style="font-size:0.92rem;">ABC School of Bartending</span>
+    </div>
+    <div class="cred-card">
+      <div class="eyebrow">Certification</div>
+      <h3>Nevada Food Handler Card</h3>
+    </div>
+    <div class="cred-card">
+      <div class="eyebrow">Certification</div>
+      <h3>TAM Alcohol Awareness Card</h3>
+    </div>
+    <div class="cred-card">
+      <div class="eyebrow">Certification</div>
+      <h3>Sheriff's Card</h3>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Let's connect</span>
+      <h2>Ready to pour<br>at your bar next.</h2>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:elliemices@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+        elliemices@gmail.com
+      </a>
+      <a href="tel:7026199192">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        702-619-9192
+      </a>
+      <span style="display:flex;align-items:center;gap:9px;font-size:0.98rem;color:rgba(255,252,245,0.7);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Las Vegas, NV
+      </span>
+    </div>
+  </div>
+  <div class="footer-bottom">Nayeli &ldquo;Ellie&rdquo; Coria &middot; Portfolio</div>
+</footer>
+
+</body>
+</html>
